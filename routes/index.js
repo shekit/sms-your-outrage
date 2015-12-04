@@ -3,6 +3,8 @@ var router = express.Router();
 var Subscriber = require("../models/subscriber");
 
 
+
+
 /* GET home page. */
 router.post('/message', function(req, res, next){
 
