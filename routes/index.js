@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Subscriber = require("../models/subscriber");
 
-
+var socket = require('socket.io');
+var io = socket();
 
 
 /* GET home page. */
@@ -13,7 +14,7 @@ router.post('/message', function(req, res, next){
 	var msg = req.body.Body || '';
 
 	//msg = msg.toLowerCase().trim();
-
+	io.emit("hello",msg)
 
 	console.log("Phone: " + phone);
 	console.log("Message: " + msg);
@@ -24,9 +25,9 @@ router.post('/message', function(req, res, next){
 
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  	res.render('index', { title: 'Express' });
 });
 
 
 
-module.exports = router;
+module.exports = {"router":router, "io":io};
