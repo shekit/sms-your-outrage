@@ -3,7 +3,10 @@ $(document).ready(function(){
 
 	var socket = io();
 
+	var ul = $("#messages");
+
 	socket.on("hello", function(msg){
 		console.log(msg)
+		ul.append("<li>"+msg+"</li>");
 	})
 })
