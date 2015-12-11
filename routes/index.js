@@ -14,7 +14,7 @@ router.post('/message', function(req, res, next){
 	var msg = req.body.Body || '';
 
 	//msg = msg.toLowerCase().trim();
-	io.emit("hello",msg);
+	io.emit("sms",msg);
 
 	console.log("Phone: " + phone);
 	console.log("Message: " + msg);
