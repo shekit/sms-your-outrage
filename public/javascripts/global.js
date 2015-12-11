@@ -266,11 +266,12 @@ $(document).ready(function(){
 		queuedOutrageArray.push(msg);
 		outrages.push(msg);
 
-		runQueuedOutrages();
+		runQueuedOutrages(msg);
 	})
 
-	function runQueuedOutrages(){
+	function runQueuedOutrages(msg){
 		if(queuedOutrageRunning == false){
+			smsDiv.html(msg);
 			queuedOutrageRunning = true;
 			runQueuedOutrageLoop();
 		}
