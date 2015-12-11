@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var outrages = ["prefilled outrage","dummy outrage", "outrageous"];
+	var outrages = ["People suggesting we bar Syrian refugees from this country and the general racist fear-mongering that dominates the news.","Police brutality.", "Mark Zuckerberg's letter to his daughter","guns. civilians, police, anyone using a gun.","environmental disaster in brazil that was neglected by the media","stereotypical assumptions of some countries","Cecil the Lion did!"];
 	var outrageCount = 0;
 
 	var socket = io();
