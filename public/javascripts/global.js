@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 	var outrageLoopRunning = false;
 
-	var outrageTimerDuration = 2000;
+	var outrageTimerDuration = 5000;
 
 	smsDiv.html(outrages[0]);
 
